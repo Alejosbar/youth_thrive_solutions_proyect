@@ -1,0 +1,456 @@
+:root {
+  --primary-blue: #007bff;
+  --secondary-gray: #6c757d;
+  --white: #ffffff;
+  --light-blue: #add8e6;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--white);
+  color: var(--secondary-gray);
+}
+
+.navbar {
+  background-color: var(--primary-blue);
+}
+
+.navbar-brand {
+  color: var(--white) !important;
+}
+
+.navbar-nav .nav-link {
+  color: var(--white) !important;
+}
+
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.card {
+  border: 1px solid var(--secondary-gray);
+}
+
+.btn-light-blue {
+  background-color: var(--light-blue);
+  color: var(--primary-blue);
+  border: none;
+}
+
+.btn-light-blue:hover {
+  background-color: var(--primary-blue);
+  color: var(--white);
+}
+
+.footer {
+  background-color: var(--secondary-gray);
+  color: var(--white);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.social-icons a {
+  color: var(--white);
+  margin: 0 10px;
+  font-size: 24px;
+}
+ 
+body { 
+background-color: #f8f9fa; 
+}
+
+.form-container { 
+min-height: 85vh; display: flex; align-items: center; 
+}
+
+body { 
+background-color: #f8f9fa; 
+}
+
+.form-container { 
+ min-height: 85vh; display: flex; align-items: center; 
+}
+
+.plan-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+        
+.plan-card:hover {
+ transform: translateY(-10px);
+ box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+        
+.payment-logo {
+ max-height: 40px;
+ margin: 10px;
+ filter: grayscale(100%);
+ transition: filter 0.3s ease;
+}
+        
+.payment-logo:hover {
+filter: grayscale(0%);
+}
+.video-container { position: relative; width: 100%; height: 100%; }
+
+      .video-container video { width: 100%; height: 100%; display: block; background: #000; border-radius: 6px; }
+
+      .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: rgba(0,0,0,0.6);
+        border: none;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 34px;
+        cursor: pointer;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.35)}
+        play-button.hide { display: none; }
+        .redondo{
+            height: 130px;
+            width: 180px;
+            border-radius: 50%;
+            position: relative;
+            left: 0;
+            margin-left: 0;
+            display: block;
+        
+        
+        }
+        
+        /* Animations for ayuda.html */
+        .help-icon {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .accordion-button {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .accordion-button:hover {
+            background-color: rgba(0, 123, 255, 0.1);
+        }
+        
+        .accordion-collapse {
+            transition: height 0.3s ease;
+        }
+        
+        .btn-outline-light:hover, .btn-light:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: var(--primary-blue);
+        }
+        
+        /* Additional animations for index.html */
+        .navbar-nav .nav-link {
+            transition: color 0.3s ease, transform 0.3s ease;
+            position: relative;
+        }
+        
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background-color: var(--white);
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+            left: 0;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: var(--light-blue) !important;
+            transform: translateY(-2px);
+        }
+        
+        .navbar-brand {
+            transition: transform 0.3s ease;
+        }
+        
+        .navbar-brand:hover {
+            transform: scale(1.05);
+        }
+        
+        .btn-outline-light, .btn-light, .btn-secondary {
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-outline-light:hover, .btn-light:hover, .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .carousel-control-prev, .carousel-control-next {
+            transition: opacity 0.3s ease;
+        }
+        
+        .carousel:hover .carousel-control-prev,
+        .carousel:hover .carousel-control-next {
+            opacity: 1;
+        }
+        
+        /* Enhanced footer styles */
+        .footer {
+            background: linear-gradient(135deg, var(--secondary-gray) 0%, #5a6c7d 100%);
+            color: var(--white);
+            padding: 40px 0 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--light-blue));
+        }
+        
+        .footer-title {
+            color: var(--white);
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-blue);
+            transition: width 0.3s ease;
+        }
+        
+        .footer-description {
+            color: #e9ecef;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .social-link {
+            color: var(--white);
+            font-size: 24px;
+            transition: all 0.3s ease;
+            padding: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-3px) scale(1.1);
+            background: var(--primary-blue);
+            box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #e9ecef;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .footer-links a::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-blue);
+            transition: width 0.3s ease;
+        }
+        
+        .footer-links a:hover::before {
+            width: 100%;
+        }
+        
+        .footer-links a:hover {
+            color: var(--light-blue);
+            transform: translateX(5px);
+        }
+        
+        .contact-info p {
+            margin-bottom: 10px;
+            color: #e9ecef;
+        }
+        
+        .contact-info i {
+            color: var(--primary-blue);
+            margin-right: 10px;
+            width: 16px;
+        }
+        
+        .newsletter h6 {
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+        
+        .newsletter-form .input-group .form-control {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            border-radius: 25px 0 0 25px;
+        }
+        
+        .newsletter-form .input-group .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .newsletter-form .input-group .form-control:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+        
+        .newsletter-form .btn-primary {
+            background-color: var(--primary-blue);
+            border-color: var(--primary-blue);
+            border-radius: 0 25px 25px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-form .btn-primary:hover {
+            background-color: var(--light-blue);
+            border-color: var(--light-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+        }
+        
+        .footer-divider {
+            border-color: rgba(255, 255, 255, 0.1);
+            margin: 30px 0;
+        }
+        
+        .footer-link {
+            color: #e9ecef;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-link:hover {
+            color: var(--primary-blue);
+        }
+        
+        /* Fade-in animation for footer elements */
+        .footer * {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .footer .row > div:nth-child(1) * { animation-delay: 0.1s; }
+        .footer .row > div:nth-child(2) * { animation-delay: 0.2s; }
+        .footer .row > div:nth-child(3) * { animation-delay: 0.3s; }
+        .footer .footer-divider { animation-delay: 0.4s; }
+        .footer .row.align-items-center * { animation-delay: 0.5s; }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Scroll-triggered reveal animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .animate-on-scroll.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Staggered animation delays for multiple elements */
+        .animate-on-scroll:nth-child(1) { transition-delay: 0.1s; }
+        .animate-on-scroll:nth-child(2) { transition-delay: 0.2s; }
+        .animate-on-scroll:nth-child(3) { transition-delay: 0.3s; }
+        .animate-on-scroll:nth-child(4) { transition-delay: 0.4s; }
+        .animate-on-scroll:nth-child(5) { transition-delay: 0.5s; }
+        .animate-on-scroll:nth-child(6) { transition-delay: 0.6s; }
+        
+        /* Performance optimization - use transform and opacity only */
+        .animate-on-scroll {
+            will-change: opacity, transform;
+        }
+        
+        .animate-on-scroll.animate-in {
+            will-change: auto;
+        }

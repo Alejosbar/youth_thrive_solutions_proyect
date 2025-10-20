@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Youth Thrive Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo MIN.png" type="image/png">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <img class="redondo" src="img/logo MIN.png" alt="">
+            <a class="navbar-brand" href="index.html">Youth Thrive Solutions</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="membresia.html">Membresía</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="test.html">Test</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="orientaciones.html">Orientaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="encuentranos.html">Encuentranos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ayuda.html">Ayuda</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center ms-lg-3">
+                    <a href="registrarse.html" class="btn btn-outline-light me-2">Registrarse</a>
+                    <a href="iniciar_sesión.html" class="btn btn-light me-3">Iniciar Sesión</a>
+                    <!-- Menú de perfil de usuario -->
+                    <div class="dropdown">
+                        <a href="#" class="btn btn-secondary dropdown-toggle" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                            <li><a class="dropdown-item" href="profile.html">Mi Perfil</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="index.html">Cerrar Sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5 animate-on-scroll">
+        <div class="text-center mb-4">
+            <i class="fas fa-clipboard-check fa-3x text-primary"></i>
+            <h1>Test</h1>
+        </div>
+
+        <div class="mb-5 p-4 bg-light rounded-3 animate-on-scroll">
+            <p class="lead">Nuestros tests están diseñados para darte una visión clara de tus fortalezas y áreas de oportunidad. Úsalos como una herramienta de autoevaluación para potenciar tu desarrollo personal y profesional.</p>
+            <ul>
+                <li><strong>Test de Habilidades:</strong> Mide tus competencias blandas clave, como comunicación, liderazgo y trabajo en equipo. Descubre en qué destacas y qué puedes mejorar para el entorno laboral.</li>
+                <li><strong>Test Socioeconómico:</strong> Analiza tu contexto en áreas como educación, estabilidad financiera y acceso a recursos. Te ayudará a identificar barreras y a encontrar rutas de apoyo para superarlas.</li>
+                <li><strong>Test de Conocimiento de CV:</strong> Pon a prueba tus conocimientos sobre cómo crear una hoja de vida efectiva. Aprende de forma práctica a evitar errores comunes y a destacar tu perfil.</li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 animate-on-scroll">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Test de Habilidades</h5>
+                        <p class="card-text">Evalúa tus habilidades blandas y técnicas.</p>
+                        <button class="btn btn-primary" onclick="startTest('habilidades')">Iniciar Test</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 animate-on-scroll">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Test Socioeconómico</h5>
+                        <p class="card-text">Analiza tu situación socioeconómica.</p>
+                        <button class="btn btn-primary" onclick="startTest('socioeconomico')">Iniciar Test</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 animate-on-scroll">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Test de Conocimiento de CV</h5>
+                        <p class="card-text">Pon a prueba qué tanto sabes para crear una hoja de vida exitosa.</p>
+                        <button class="btn btn-primary" onclick="startTest('cv')">Iniciar Test</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="quiz-container" class="mt-5 animate-on-scroll" style="display: none;">
+            <div id="question-container"></div>
+            <button id="next-btn" class="btn btn-primary mt-3" style="display: none;">Siguiente</button>
+        </div>
+        <div id="results-container" class="mt-5 animate-on-scroll" style="display: none;">
+            <h2>Resultados</h2>
+            <canvas id="resultsChart"></canvas>
+            <div id="summary"></div>
+        </div>
+    </div>
+
+    <!-- Modal para Consejos de Mejora -->
+    <div class="modal fade" id="improvementModal" tabindex="-1" aria-labelledby="improvementModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="improvementModalLabel">Consejos para Mejorar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 id="improvementCategory"></h6>
+                    <p id="improvementTip"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ 
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="footer-title">Youth Thrive Solutions</h5>
+                    <p class="footer-description">Empoderando a los jóvenes para construir un futuro exitoso en el mundo laboral.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/1FQVupeuAN/" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/youth_thrive_solution?igsh=NGVncmppbXJrMDI2" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@youth_thrive_solu?_t=ZS-908EriwQjz7&_r=1" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://x.com/Youth_Thrive_?t=TvMk6y5GN77WVJujOBkpBQ&s=08" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="https://co.linkedin.com/company/youth-thrive-solutions" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="footer-title">Enlaces Rápidos</h5>
+                    <ul class="footer-links">
+                        <li><a href="membresia.html">Membresía</a></li>
+                        <li><a href="test.html">Test</a></li>
+                        <li><a href="orientaciones.html">Orientaciones</a></li>
+                        <li><a href="encuentranos.html">Encuentranos</a></li>
+                        <li><a href="ayuda.html">Ayuda</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <h5 class="footer-title">Contacto</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Funza, Colombia</p>
+                        <p><i class="fas fa-phone"></i> +57 311 771 5895</p>
+                        <p><i class="fas fa-envelope"></i> info@youththrivesolutions.com</p>
+                    </div>
+                    <div class="newsletter mt-3">
+                        <h6>Suscríbete a nuestro boletín</h6>
+                        <form class="newsletter-form">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Tu correo electrónico" aria-label="Email">
+                                <button class="btn btn-primary" type="submit">Suscribir</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Youth Thrive Solutions. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="footer-link">Política de Privacidad</a> |
+                    <a href="#" class="footer-link">Términos de Servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/test.js"></script>
+    <script>
+        // Scroll-triggered animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
